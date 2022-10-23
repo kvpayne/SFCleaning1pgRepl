@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Streak Free || Home</title>
+  
+                                <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  
+                                <!-- Bootstrap CDN     -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+                                <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  
+                                <!-- font-awesome CDN. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+                                <!-- Custom styles -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-spy" data-bs-offset="100">
+  <nav class="navbar navbar-expand-sm sticky-top"  id="navbar-spy">
+    <div class="container-fluid shadow animate__animated animate__rubberBand animate__delay-1s">
+      <a class="navbar-brand" href="#"><img class="logo-image" src="Images/Angela_profile_img.jpg" alt="logo-image"></a>
+      <div class="nav-item">
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+              <li class="nav-items">
+                <a class="nav-link" href="#spy-about">About Us</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-link" href="#spy-services">Services</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-link" href="#spy-affiliates">Affiliate Services</a>
+              </li>
+              <li class="nav-items">
+                <a class="nav-link" href="#spy-contact">Contact Us</a>
+           </li>
+         </ul>
+       </div>
+     </div>
+  </nav>
+  <section class="hero-section">
+    <header>
+      <br>
+      <br>
+      <h1 class="main-title biz-name">S F Cleaning Services, LLC</h1>
+      <br>
+      <h3 class="tag-line"><i>Every thing, Every time!</i></h3>
+    </header>
+  <section class="content-section container">
+      <div class="about-content">
+        <h3 class="section-title" id="spy-about"><i>About Us</i></h3>
+        <img class="about-owners-image" src="Images/Angela_about_pic.jpg" alt="owners-photo" width="300">
+        <p class="about-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos officia possimus vero placeat eum. Amet aspernatur culpa quos animi! Eligendi cupiditate porro tempora enim tenetur sapiente uga assumenda ipsam officiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos beatae nesciunt, harum labore corrupti vitae repudiandae qui ab obcaecati eligendi eaque voluptatem, alias est enim deserunt sint aut et fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit odit quod quae nesciunt voluptatibus quas nulla mollitia. Suscipit dolor placeat, sunt fuga ipsa blanditiis dolorem nesciunt, fugit voluptas ipsam perferendis.</p>
+      </div>
+    </section>
+    <hr>
+<!-- This section is presenting sizing issues as the VP retracts, need them 100%vw on mobile vp -->
+    <section class="services-section">
+      <h3 class="section-title service-section-title" id="spy-services"><i>Cleaning Services</i></h3>
+      <div class="container-fluid">    <!--here we experiment with col-sm-3, etc to align items better, but struggling with it.-->
+        <div class="row">
+          <div class="column">
+            <div class="residential-content services">
+              <h4 class="service-title"><i>Residential Homes</i></h4>
+              <img class="services-image image-fluid" src="Images/residential_home.jpg"  onclick="myResidential()" alt="residential house cleaning" style="width:100%">
+<!--  trying to make a text box work for the user <a href="sms://+14808192274">Shoot Us a Text</a> -->
+            </div>
+          </div>
+          <div class="column">
+            <div class="commercial-content services">
+              <h4 class="service-title"><i>Commercial Facilities</i></h4>
+              <img class="services-image image-fluid" src="Images/commercial_facility.jpg" onclick="myFunction()" alt="commercial facility cleaning" style="width:100%">
+            </div>
+          </div>
+          <div class="column">
+            <div class="vacation-content services">
+              <h4 class="service-title"><i>Vacation Rentals</i></h4>
+              <img class="services-image image-fluid" src="Images/vacation_home.jpg" onclick="myFunction()" alt="vacation rental cleaning" style="width:100%">
+            </div>
+          </div>
+          <div class="column">
+            <div class="events-content services">
+              <h4 class="service-title"><i>Event Cleaning</i></h4>
+              <img class="services-image event-image image-fluid" src="Images/Wedding_Point.jpg" onclick="myFunction()" alt="event cleaning" style="width:100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+                             <!-- Affiliate Services Section -->
+<!--    Sizing issues causing width to shrink and height to elongate on mobile vp, and they are remaining in a row, need them to translate to a column and size to about 75%-100% vw -->
+    <section class="container-fluid affiliate-section">
+      <h3 class="section-title" id="spy-affiliates"><i>Affiliate Services</i></h3>
+      <br>
+       <br> 
+         <div class="cards">
+          <div class="card">
+            <h5><a class="affiliate-title" onclick="window.location.href='https://book.housecallpro.com/book/Starr-Cleaning-Services/561a6a081c674bb8ba2a46276c1aa935?attribution=pricing-page';">Carpet & Tile/Grout</a></h5>
+              <p>Simply the best with our number one preferred vendor for all our carpet, tile and grout needs.</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Window Cleaning</a></h5>
+              <p>People watch through crystal clear, freshly cleaned windows with our top rated window technician</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Landscaping</a></h5>
+              <p>Just in time for your summer gatherings, beautiful landscaping services.</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Junk Removal</a></h5>
+              <p>Hard working junk removal at a reasonable price, no job too big or too small.</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Pool Services</a></h5>
+              <p>Excellent full service pool company with qualified technicians</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Plumbing</a></h5>
+              <p>Licensed plumber that truly cares about customer satisfaction.</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Handy Man Services</a></h5>
+              <p>Quality handy man services you can rely on.</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Home Restoration Services</a></h5>
+              <p>Licensed contractor owned business to make your restoration experience stress free.</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="#">Real Estate Agent</a></h5>
+              <p>Professional, courteous service.</p>
+            </div>
+            <div class="card">
+              <h5><a class="affiliate-title" href="mailto:kvpayne31@gmail.com?subject=MESSAGE FROM SF AFFILIATE WEBSITE SECTION">Web Development & Design</a></h5>
+              <p>Custom websites, designed just for you and your customers needs at a reasonable price.</p>
+          </div>
+       </div>
+        <!--         <div class="card">
+          <h5><a class="affiliate-title" href="#">Property Management</a></h5>
+          <p>info text</p>
+        </div> -->
+    </section>
+    <hr>
+                          <!--   Contact section -->
+    <section class="container-fluid  contact-section">
+      <h4 class="section-title" id="spy-contact"><i>Contact</i></h4>
+          <div class="row" style="width:10px height:10px">
+            <div class="col-3">
+              <div class="img-fluid">
+                <a href="https://www.facebook.com/1730536083675405" class="fa fa-facebook contact-icon"></a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img-fluid">
+                <a href="https://www.linkedin.com/in/angela-stone-927918191" class="fa fa-linkedin contact-icon"></a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img-fluid">
+                <a href="https://www.instagram.com/streak_free_cleaning_services" class="fa fa-instagram contact-icon"></a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img-fluid">
+                <a href="mailto:angela@streakfreecleaningservices.com?subject=MESSAGE FROM YOUR 
+              WEBSITE" class="fa fa-envelope contact-icon"></a>
+              </div>
+            </div>
+          </div>
+    </section>
+  <hr>
+<br>
+                                <!-- Footer section -->
+    <p class="text-center"><i><small class="copyright"><sup>&#169</sup>2022 Streak Free Cleaning Services, LLC - all rights reserved - styled by SpaceBourne ALHS Media, LLC</small></i></p>
+    <script src="script.js"></script>
+   </body>
+ </section>
+</html>

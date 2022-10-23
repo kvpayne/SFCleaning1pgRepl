@@ -1,0 +1,224 @@
+:root {
+  --primary: rgb(4, 0, 255);
+  --secondary: lime;
+  --dark: #212121;
+  --light: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;  /*this will set the size of the box and the content taking into account the 
+                             inherent padding already inside the box, there is no need to add padding to 
+                             this, it's inside the box.*/
+  font-family: Raleway; 
+/*   color: #777; /*this color is easier on the eyes to read*/ 
+}
+
+html, body {
+  margin: 0;     /*These styles are to get rid of the white space around the image on the document.*/
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  background: linear-gradient(to left, var(--primary), var(--secondary));
+} 
+
+.logo-image {
+    width:10%;
+    border-radius: 20%;
+    border-color: var(--primary), 3px;  /*not sure this style is doing anything here.*/
+    box-shadow: 3px 4px 8px 4px rgb(19, 11, 11, 0.6);
+} 
+
+.nav-link {
+  color: var(--light); 
+  font-size: 1.2em;
+  white-space: nowrap;
+  text-shadow: 1px 1px black;
+}
+/*It seems as though I will need to place the hero image into the HTML, inline, in order for the opacity to work appropriately, like a min-height % */
+.hero-section {
+    background-image: url(Images/man_Raking.jpg);
+    width:100%;
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-color: transparent;
+/*     opacity: 0.4; need to figure new way to achieve desired opacity here.*/ 
+    min-height:75vh; 
+}
+
+.hero-section, .main-title, .tag-line {
+  color: white;
+  text-align: left;
+}
+
+/* .hero-section:hover {
+  opacity: 1.0;
+}     within this, adjustments need to be made so all elements are not assigned the same opacity.*/
+
+.main-title {
+  margin-left: 15px;
+  font-size: 4em;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+}
+
+.tag-line {
+  font-size: 2.5em;
+  margin-left: 50px;
+  margin-bottom: 500px;
+  text-shadow: 1px 1px black;
+}
+
+.section-title {
+  color: white;
+  font-size: 2.0em; /*makes font about 20% larger*/
+  text-shadow: 1px 1px black;  
+  margin: 0, 0;
+  padding: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}  
+
+.content-section {
+  margin: 1em;      /*This will keep the content from squishing up against the sides of the viewport.*/
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;       /*This will make the text always center due to the auto attribute making l & r 
+                          margins exactly the same.*/
+  padding: 0 1.5em;
+}
+
+.about-info {
+  font-size: 1.3em;
+  text-shadow: .75px .75px #000;
+  margin: 25px 0px 200px 0px;
+}
+
+.about-owners-image {
+  float: left;         /*This property will make the text float around the image smoothly, by moving the image all the way to the left.*/
+  height: 200px;       /*resize the image, as it is very large by default*/
+  width: 200px; 
+  margin: 20px;        /*This margin is to push the text from the side of the pic.*/
+  border-radius: 50%;
+  border: 3px solid  lime;
+  box-shadow: 3px 4px 8px 4px rgb(19, 11, 11, 0.6);
+}
+
+.about-owners-image:hover {
+  transition:transform .5s ease-in-out;
+  transform: scale(1.2) rotate(42deg);
+}
+
+/*----------------------- Services Section -----------------------------------  */
+
+/*having trouble with the styling here and with the affiliate card deck. services are staying in a row on small - large vp, and cards are sized by the <p> alphanumeric count, that needs to change to all the same size and spacing, it looks really stupid now.  */
+
+.services-section {
+  margin-top: 50px;
+}
+
+.service-section-title {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.column {     
+/*   flex: 33.33%; for having three elements inside service container.*/
+/*   flex: 25.00%; this gives a nice row, using 35% splits into two rows but looks better on small vps*/
+  flex: 25%;  
+  padding: 5px;
+  margin: 5px 0px 100px 0px;
+  text-align: center; 
+  justify-content: center;
+}
+
+.services-image {
+  max-width: 75%;
+/*   height: auto;  */
+  min-height: 75%;
+  border-radius: 10px;
+  box-shadow: 3px 4px 8px 4px rgb(19, 11, 11, 0.6);
+} 
+.services-image:hover {
+  transition:transform .5s ease-in-out;
+  transform: scale(1.2); 
+}
+
+.event-image {
+/*   max-height: 275px;  /*needed to manually size image, as it was twice the size of the rst in the section*/ 
+  max-width: 60%;
+  height: auto;
+}
+
+/*------------------Affiliate Section----------------------*/
+
+.affiliate-section {
+  margin-bottom: 250px;
+}
+
+.affiliate-title {
+  color: var(--light);
+}
+
+.cards {
+  display: flex;
+  --distance: -4.0rem; 
+/*   clamp(50px, 100px, 120px);  */
+}
+.card {
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 4px 4px 15px 2px;
+  transition: 0.2s;
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  
+}
+.card:not(:first-child) {
+  margin-left: var(--distance);
+}
+.card:hover {
+  transition: 0.2s;
+  transform: translateY(-1rem); 
+}
+.card:hover ~.card {
+  transform: translateX(calc(var(--distance) * -1));
+}
+
+/* -----------------------------contact section---------------------------- */
+ .contact-section {
+  padding: 0;
+  background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+  box-shadow: 3px 4px 8px 4px rgb(19, 11, 11, 0.6);
+  border-radius: 50%;
+}
+
+ .contact-icon {
+  color:white;
+  padding: 0;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  margin-bottom: 10%;
+}
+.contact-icon:hover {
+   color: var(--dark); 
+   text-shadow: 1px 1px rgba(25, 100, 250, 0.959);
+ }
+
+ /* -------------------------------footer section------------------------------- */
+ .copyright {
+   text-align: center;
+    }
